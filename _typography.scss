@@ -1,0 +1,28 @@
+
+h2, p, span {
+    font-family: $paragraph-font;
+    color: $Dark-grayish-blue;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+}
+h2 {
+    letter-spacing: 5px;
+}
+.title {
+    font-family: $title-price-font;
+    color: $Very-dark-blue;
+}
+.price {
+    color: $Dark-cyan;
+    font-family: $title-price-font;
+}
+.cost {
+    display: flex;
+    align-items: center;
+    h2 {
+        margin-left: 20px;
+        letter-spacing: normal;
+        text-decoration:line-through;
+    }
+}

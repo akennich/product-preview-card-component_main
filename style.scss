@@ -1,0 +1,67 @@
+@import 'vars';
+@import 'typography';
+@import 'button';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $Cream;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 600px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+%ratio {
+    width: 50%;
+}
+.left {
+    @extend %ratio;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.right {
+    @extend %ratio;
+    height: 100%;
+    background-color: $White;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and  (max-width: 600px) {
+    main {
+        height: 600px;
+        flex-direction: column;
+    }
+    .left {
+       img {
+        display: none;
+       }
+       width: 310px;
+       height: 60%;
+       background-image: url('./images/image-product-mobile.jpg');
+       background-size: cover;
+       border-radius: 10px 10px 0 0;
+    }
+    .right {
+        width: 310px;
+        border-radius: 0 0 10px 10px;
+    }
+}
